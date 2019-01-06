@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
-IMG_FILE="${STAGE_WORK_DIR}/${IMG_DATE}-${IMG_NAME}${IMG_SUFFIX}.img"
-INFO_FILE="${STAGE_WORK_DIR}/${IMG_DATE}-${IMG_NAME}${IMG_SUFFIX}.info"
+IMG_FILE="${STAGE_WORK_DIR}/${IMG_FILENAME}.img"
+INFO_FILE="${STAGE_WORK_DIR}/${IMG_FILENAME}.info"
 
 on_chroot << EOF
 /etc/init.d/fake-hwclock stop
@@ -22,6 +22,8 @@ rm -f "${ROOTFS_DIR}/etc/passwd-"
 rm -f "${ROOTFS_DIR}/etc/group-"
 rm -f "${ROOTFS_DIR}/etc/shadow-"
 rm -f "${ROOTFS_DIR}/etc/gshadow-"
+rm -f "${ROOTFS_DIR}/etc/subuid-"
+rm -f "${ROOTFS_DIR}/etc/subgid-"
 
 rm -f "${ROOTFS_DIR}"/var/cache/debconf/*-old
 rm -f "${ROOTFS_DIR}"/var/lib/dpkg/*-old
@@ -72,10 +74,10 @@ unmount_image "${IMG_FILE}"
 
 mkdir -p "${DEPLOY_DIR}"
 
-rm -f "${DEPLOY_DIR}/image_${IMG_DATE}-${IMG_NAME}${IMG_SUFFIX}.zip"
+rm -f "${DEPLOY_DIR}/${ZIP_FILENAME}.zip"
 
 pushd "${STAGE_WORK_DIR}" > /dev/null
-zip "${DEPLOY_DIR}/image_${IMG_DATE}-${IMG_NAME}${IMG_SUFFIX}.zip" \
+zip "${DEPLOY_DIR}/${ZIP_FILENAME}.zip" \
 	"$(basename "${IMG_FILE}")"
 popd > /dev/null
 

@@ -4,9 +4,8 @@ python3 python3-tk
 python3-pgzero
 python-serial python3-serial
 python-picamera python3-picamera
-debian-reference-en dillo x2x
+debian-reference-en dillo
 raspberrypi-net-mods raspberrypi-ui-mods
-smartsim
 python-pip python3-pip
 python3-numpy
 pypy
@@ -22,6 +21,5 @@ python-twython python3-twython
 python-smbus python3-smbus
 python-flask python3-flask
 python-picraft python3-picraft
-python-sense-emu python3-sense-emu sense-emu-tools python-sense-emu-doc
 pprompt
 python3-thonny
