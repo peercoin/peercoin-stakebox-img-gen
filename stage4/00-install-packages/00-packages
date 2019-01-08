@@ -11,6 +11,4 @@ tree
 nodered
 libgl1-mesa-dri libgles1-mesa libgles2-mesa xcompmgr
 piclone
-python-spidev python3-spidev
-python-smbus python3-smbus
 pprompt
