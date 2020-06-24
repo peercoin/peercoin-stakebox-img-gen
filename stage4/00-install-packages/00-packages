@@ -1,5 +1,5 @@
 python python3-pygame python-pygame python-tk
-python3 python3-tk python3-thonny
+python3 python3-tk thonny
 python3-pgzero
 python-serial python3-serial
 debian-reference-en
@@ -10,6 +10,11 @@ alacarte rc-gui
 tree
 libgl1-mesa-dri libgles1 libgles2-mesa xcompmgr
 piclone
+wiringpi pigpio python-pigpio python3-pigpio raspi-gpio python-gpiozero python3-gpiozero python3-rpi.gpio
+python-spidev python3-spidev
+python-twython python3-twython
+python-smbus python3-smbus
+python-flask python3-flask
 pprompt
 piwiz
 rp-prefapps
