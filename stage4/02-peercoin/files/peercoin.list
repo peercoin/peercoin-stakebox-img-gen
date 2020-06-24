@@ -1,1 +1,1 @@
-deb http://repo.peercoin.net stretch main
+deb https://peercoin.github.io/deb-repo/ buster main
